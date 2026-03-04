@@ -11,7 +11,8 @@ This project develops a predictive model for product pricing in the consumer ele
 ## Problem Statement
 
 In the competitive consumer electronics market, determining optimal product pricing is a complex challenge that involves balancing multiple factors including:
-- Production costs and hardware specifications  
+
+- Production costs and hardware specifications
 - Market demand and competitor strategies
 - Brand positioning and seasonal trends
 
@@ -38,6 +39,7 @@ This project addresses the need for a data-driven pricing model that can accurat
 ## Key Analyses Completed
 
 ### 1. Exploratory Data Analysis (EDA)
+
 - ✅ Dataset overview and statistical summaries
 - ✅ Missing value analysis and treatment
 - ✅ Duplicate detection and removal
@@ -45,18 +47,21 @@ This project addresses the need for a data-driven pricing model that can accurat
 - ✅ Correlation analysis and multicollinearity detection
 
 ### 2. Data Visualization
+
 - ✅ Price distribution by categories and brands
 - ✅ Feature correlation heatmaps
 - ✅ Temporal pricing trends
 - ✅ Market dynamics visualization
 
 ### 3. Feature Engineering & Preprocessing
+
 - ✅ Domain-informed feature selection
 - ✅ Data leakage detection and removal
 - ✅ Feature reduction using correlation analysis
 - ✅ Dimensionality reduction with PCA
 
 ### 4. Data Preprocessing Pipeline
+
 - ✅ Normality testing (before scaling)
 - ✅ Feature scaling (StandardScaler & MinMaxScaler)
 - ✅ Post-scaling validation and verification
@@ -65,18 +70,21 @@ This project addresses the need for a data-driven pricing model that can accurat
 ## Key Findings
 
 ### Data Quality
+
 - **No missing values** after preprocessing
 - **No duplicate records** found
 - **20 features** selected after feature reduction
 - **10,000 samples** ready for training
 
 ### Feature Insights
+
 - **Screen Size** (r=0.609) - Strongest hardware predictor
-- **Battery Capacity** (r=0.578) - Second strongest predictor  
+- **Battery Capacity** (r=0.578) - Second strongest predictor
 - **Weight** (r=0.557) - Important for pricing decisions
-- **Data Leakage Features Removed:** Profit_Margin_%, Price_to_Demand_Ratio
+- **Data Leakage Features Removed:** Profit*Margin*%, Price_to_Demand_Ratio
 
 ### Scaling Results
+
 - ✅ **StandardScaler:** All features normalized (Mean≈0, Std≈1)
 - ✅ **Distributions improved** after scaling
 - ✅ **Ready for linear models** (Ridge, Lasso, Linear Regression)
@@ -84,12 +92,14 @@ This project addresses the need for a data-driven pricing model that can accurat
 ## Files Generated
 
 ### Processed Datasets
+
 - `final_dataset_standard_scaled.csv` - StandardScaled features + target
 - Ready for immediate model training
 
 ### Analysis Outputs
+
 - Comprehensive EDA visualizations
-- Feature correlation matrices  
+- Feature correlation matrices
 - Distribution plots after scaling
 - Statistical summaries and insights
 
@@ -106,8 +116,9 @@ This project addresses the need for a data-driven pricing model that can accurat
 ## Next Steps
 
 ### Recommended Model Training Pipeline
+
 1. **Train-Test Split** (80/20, stratified by price quartiles)
-2. **Model Training:** 
+2. **Model Training:**
    - Linear Regression (baseline)
    - Ridge/Lasso Regression (regularized)
    - Random Forest (ensemble)
@@ -117,6 +128,7 @@ This project addresses the need for a data-driven pricing model that can accurat
 5. **Final validation** on test set
 
 ### Expected Performance
+
 - **Baseline R²:** ~0.70 (current feature set)
 - **Target R²:** 0.85+ (with hyperparameter tuning)
 - **Error Reduction:** 30-40% improvement expected
@@ -124,17 +136,20 @@ This project addresses the need for a data-driven pricing model that can accurat
 ## Installation & Usage
 
 1. **Clone the repository:**
+
    ```bash
    git clone <repository-url>
    cd Data Science
    ```
 
 2. **Install dependencies:**
+
    ```bash
    pip install -r requirements.txt
    ```
 
 3. **Run the analysis:**
+
    ```bash
    jupyter notebook DS_Project_KCE081BCT032.ipynb
    ```
